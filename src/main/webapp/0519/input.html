@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+[type="button"] {
+	width: 120px;
+}
+</style>
+<script>
+	function send() {
+		alert("예?");
+		// 데이터 전송을 위한 코드 작성
+		var frm = document.getElementsByTagName('form')[2];
+		frm.submit();
+	}
+</script>
+</head>
+<body>
+	<form action="test.jsp" method="get">
+		id: <input name="userID"> <br>
+		<!-- default는 text -->
+		pw: <input name="userPW" type="password"> <br> <input
+			type="submit" value="전송하기">
+	</form>
+	<hr>
+	<form action="test.jsp" method="post">
+		id: <input name="userID"> <br>
+		<!-- default는 text -->
+		pw: <input name="userPW" type="password"> <br> <input
+			type="submit" value="전송하기">
+	</form>
+	<hr>
+	<!-- input type="button"으로 변경 후 전송기능 부여하기 -->
+	<form action="test.jsp" method="post">
+		id: <input name="userID"> <br>
+		<!-- default는 text -->
+		pw: <input name="userPW" type="password"> <br> <input
+			type="button" value="btn" onclick="send()">
+	</form>
+	<hr>
+	<!-- input type="image"으로 변경 후 전송기능 부여하기 -->
+	<form action="test.jsp" method="post">
+		id: <input name="userID"> <br>
+		<!-- default는 text -->
+		pw: <input name="userPW" type="password"> <br> <input
+			type="image" src="../images/sponge bob rainbow.gif"> <input
+			type="reset" value="Reset">
+	</form>
+</body>
+</html>
