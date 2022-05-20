@@ -3,6 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link href="../css/outStyle.css" rel="stylesheet">
+
+<style>
+pre {
+	background-color: lightblue;
+}
+</style>
 </head>
 <body>
 	<pre>	
@@ -12,17 +19,31 @@
 	hidden		보여지지 않지만 서버로 전송되는 숨겨진 값
 	</pre>
 
-	<form action="" method="get">
-		이름: <input name="name"> <br> 성별: 남<input type="radio"
-			name="gender" value="남자"> 여<input type="radio" name="gender"
-			value="여자"> <br> 좋아하는 것: <input type="checkbox"
-			name="food" value="떡볶이"> 떡볶이 <input type="checkbox"
-			name="food" value="파스타">파스타 <input type="checkbox"
-			name="food" value="곱창">곱창 <input type="checkbox" name="food"
-			value="빙수">빙수 <input type="checkbox" name="food" value="냉면">냉면
-		<input type="checkbox" name="food" value="돈가스">돈가스 <br>
+	<form action="test2.jsp" method="get">
+
+		<p>
+			이름: <input name="name"> <br> 성별: 남<input type="radio"
+				name="gender" value="남자"> 여<input type="radio" name="gender"
+				value="여자"> <br>히든>> <input type="hidden" name="hidden"
+				value="비이미이일">
+		</p>
+		<p>
+			좋아하는 것: <input type="checkbox" name="food" value="떡볶이"> 떡볶이 <input
+				type="checkbox" name="food" value="파스타">파스타 <input
+				type="checkbox" name="food" value="곱창">곱창 <input
+				type="checkbox" name="food" value="빙수">빙수 <input
+				type="checkbox" name="food" value="냉면">냉면 <input
+				type="checkbox" name="food" value="돈가스">돈가스
+		</p>
 		파일: <input type="file" name="file"><br> <input
-			type="submit"> <input type="reset">
+			type="submit"> <input type="reset"><br>
+		<!-- type="button" 은 순수한 버튼으로 별도의 기능이 없음 -->
+		<input type="button" value="input타입 버튼">
+		<button type="button">버튼타입 버튼</button>
+
+		<!-- 기능이 존재함 -->
+		<button>button</button>
+
 	</form>
 </body>
 </html>
