@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>폰트는 영어로 폰트</title>
+<style>
+textarea {
+	direction: rtl;
+}
+
+#d1 {
+	letter-spacing: 5px;
+	line-height: 20px;
+}
+
+#d2 {
+	text-align: right;
+	text-decoration: overline;
+}
+
+#d3 {
+	text-indent: 50px;
+}
+
+h4 {
+	text-shadow: 2px 2px 10px lightgray; /* x축 y축 번짐정도 색상 */
+	text-transform: capitalize;
+}
+</style>
+</head>
+<body>
+	<h4>direction(작성방향) : rtl, ltr</h4>
+	<textarea rows="4" cols="20"></textarea>
+	<br>
+
+	<h4>letter-spacing(자간) / line-height(행간)</h4>
+	<div id="d1">
+		에이<br>비씨디이에프지
+	</div>
+	<h4>text-align(정렬) / text-decoration(텍스트 꾸밈)</h4>
+	<div id="d2">
+		에이<br>비씨디이에프지
+	</div>
+	<h4>text-indent(들여쓰기)</h4>
+	<div id="d3">
+		에이<br>비씨디이에프지
+	</div>
+</body>
+</html>

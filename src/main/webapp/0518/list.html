@@ -1,28 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
-.a{
- list-style-type: korean-hangul-formal;
+ul, ol {
+/*   border: solid red; */
+}
+li {
+/*   border: solid blue; */
+}
+.a {
+/*   list-style-type: korean-hangul-formal; */
+  list-style-type: hiragana;
+  list-style-image: url(../images/ddit.PNG);
+  list-style-position: outside;
 }
 </style>
 </head>
 <body>
-	<!-- ¼ø¼­¾ø´Â ¸ñ·Ï -->
-	<ul>
-		<li type="disc">¸®½ºÆ®1</li> <!-- type default -->
-		<li type="circle">¸®½ºÆ®2</li>
-		<li type ="square">¸®½ºÆ®3</li>
-	</ul>
-	
-	<!-- ¼ø¼­ÀÖ´Â ¸ñ·Ï -->
-	<ol class="a">
-		<li>¸®½ºÆ®1</li>
-		<li>¸®½ºÆ®2</li>
-		<li>¸®½ºÆ®3</li>
-	</ol>
-	
+  <!-- ìˆœì„œì—†ëŠ” ëª©ë¡ -->
+  <ul>
+    <li type="disc">ë¦¬ìŠ¤íŠ¸1</li> <!-- type default -->
+    <li type="circle">ë¦¬ìŠ¤íŠ¸2</li>
+    <li type="square">ë¦¬ìŠ¤íŠ¸3</li>
+  </ul>
+  
+  <!-- ìˆœì„œìˆëŠ” ëª©ë¡ -->
+  <ol class="a">
+    <li>ë¦¬ìŠ¤íŠ¸1</li>
+    <li>ë¦¬ìŠ¤íŠ¸2</li>
+    <li>ë¦¬ìŠ¤íŠ¸3</li>
+  </ol>
+  
+  <ol type="A">
+    <li>ë¦¬ìŠ¤íŠ¸1</li>
+    <li>ë¦¬ìŠ¤íŠ¸2</li>
+    <li>ë¦¬ìŠ¤íŠ¸3</li>
+  </ol>
+  
+  
+  <dl>
+    <dt>ì œëª©1</dt>
+    <dd>ë‚´ìš©1</dd>	<!-- ë“¤ì—¬ì“°ê¸° -->
+    <dt>ì œëª©2</dt>
+    <dd>ë‚´ìš©2</dd>	<!-- ë“¤ì—¬ì“°ê¸° -->
+  </dl>
+
+  
+
+
 </body>
 </html>

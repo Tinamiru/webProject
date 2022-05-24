@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+* {
+	font-style: italic;
+}
+
+h3 {
+	text-align: center;
+}
+
+div, p {
+	border: 1px solid lightgray;
+	margin: 10px; /* 바깥여백*/
+}
+
+#d1 div {
+	border: dashed red;
+}
+
+#d1 p {
+	border: inset blue;
+}
+
+#d1>div {
+	border: solid pink 4px;
+}
+
+#d1>p {
+	border: dotted green 3px;
+}
+
+#d1>div>p {
+	border: 1px solid gold
+}
+
+#p1 ~p {
+	color: green;
+}
+
+#p1 ~* {
+	background-color: lightblue;
+}
+
+#p1+p {
+	color: red;
+}
+</style>
+</head>
+
+<body>
+	<h3>자손/자식 selector</h3>
+
+	<div id="d1">
+		<p>#d1의 자식'p'</p>
+		<div>
+			#d1의 자식 div
+			<p>#d1의 후손'p'</p>
+			<div>#d1의 후손'div'</div>
+		</div>
+	</div>
+	<div>
+		<p id="p1"></p>
+		<p>형제1p</p>
+		<div>형제2 div</div>
+		<p>형제3</p>
+		<p>형제4</p>
+		<p>형제5</p>
+		<p>형제6</p>
+	</div>
+</body>
+</html>
