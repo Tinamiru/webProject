@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+div {
+	border: solid;
+	margin: 2px;
+	box-sizing: border-box;
+}
+
+h1:nth-of-type(1) {
+	text-align: center;
+}
+
+div:nth-of-type(1) {
+	background-color: purple;
+}
+
+div:nth-of-type(2) {
+	border-color: orange;
+	background-color: orange;
+	width: calc(30% - 3px);
+	height: 400px;
+	float: left;
+}
+
+div:nth-of-type(3) {
+	background-color: yellow;
+	width: calc(70% - 3px);
+	height: 400px;
+	float: right;
+}
+
+div:nth-of-type(4) {
+	background-color: gray;
+	color: white;
+	height: 30px;
+	clear: both;
+	position: relative;
+	top: 2px;
+	height: 30px;
+}
+</style>
+</head>
+<body>
+
+	<div>
+		<h1>My Blog Page</h1>
+	</div>
+	<div>
+		<h3>Links</h3>
+		<ul>
+			<li><a href="#"> W3C </a></li>
+			<li><a href="#"> MOZILLA </a></li>
+			<li><a href="#"> HTML Dogs</a></li>
+			<img src="">
+		</ul>
+	</div>
+	<div>
+		<h3>Semantic Tags</h3>
+		<span> 시멘틱 요소(Semantic elements)들은 브라우저에게 요소의 의미나 목적을 명확하게 알려주는
+			요소이다. </span>
+		<h3>div와 span</h3>
+		<span> div은 "divide"의 약자로서 페이지를 논리적인 섹션으로 분리하는데 사용되는 태그이다. span
+			요소는 인라인 요소로서 텍스트를 위한 컨테이너로 사용할 수 있다. </span>
+	</div>
+	<div>Copyright (c) 2013 Hong</div>
+
+</body>
+</html>
