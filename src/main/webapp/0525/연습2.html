@@ -10,27 +10,27 @@
 }
 
 header {
-	background-color: purple;
+	background-color: violet;
 	height: 80px;
 }
 
 nav {
-	background-color: orange;
+	background-color: gold;
 	width: calc(30%);
-	height: 400px;
+	height: 300px;
 	float: left;
 }
 
 main {
 	background-color: yellow;
 	width: calc(70%);
-	height: 400px;
+	height: 300px;
 	float: right;
 }
 
 footer {
-	background-color: gray;
-	height: 30px;
+	background-color: brown;
+	height: 50px;
 	clear: both;
 	text-align: center;
 }
@@ -44,6 +44,7 @@ h1 {
 span {
 	color: white;
 	position: relative;
+	top: 10px;
 }
 
 .layout_nav {
@@ -53,6 +54,10 @@ span {
 .layout_main {
 	margin: 0 5%;
 }
+
+img {
+	width: 80px;
+}
 </style>
 </head>
 <body>
@@ -61,28 +66,30 @@ span {
 	</header>
 	<nav class="layout">
 		<div class="layout_nav">
-			<h3>Links</h3>
+			<h2>Links</h2>
 			<ul>
-				<li><a href="#"> W3C </a></li>
-				<li><a href="#"> MOZILLA </a></li>
-				<li><a href="#"> HTML Dogs</a></li>
+				<li><a href="#">W3C</a></li>
+				<li><a href="#">MOZILLA</a></li>
+				<li><a href="#">HTML Dogs</a></li>
 			</ul>
 			<div class="layout_nav">
-				<img src="../../images/ddit.PNG" alt="ddit"> DDIT
+				<img src="../images/ddit.PNG" alt="logo"> <br> 대덕인재개발원
 			</div>
 		</div>
 	</nav>
 	<main class="layout">
 		<div class="layout_main">
 			<h3>Semantic Tags</h3>
-			<p>시멘틱 요소(Semantic elements)들은 브라우저에게 요소의 의미나 목적을 명확하게 알려주는 요소이다.</p>
+			<p>시맨틱요소(Semantic elements)들은 브라우저에게 요소의 의미나 목적을 명확하게 알려주는 요소이다</p>
 			<h3>div와 span</h3>
-			<p>div은 "divide"의 약자로서 페이지를 논리적인 섹션으로 분리하는데 사용되는 태그이다. span 요소는
-				인라인 요소로서 텍스트를 위한 컨테이너로 사용할 수 있다.</p>
+			<p>
+				div는 "divide"의 약자로서 ...............................<br>span요소는
+				인라인 요소로서 ................
+			</p>
 		</div>
 	</main>
 	<footer class="layout">
-		<span> Copyright (c) 2013 Hong </span>
+		<span>Copyright(c) 2022 DDIT</span>
 	</footer>
 </body>
 </html>

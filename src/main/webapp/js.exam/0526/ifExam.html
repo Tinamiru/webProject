@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../../css/outStyle.css">
+</head>
+<body>
+	<h4>숫자와 연산식을 입력하여 계산하시오</h4>
+	<div id="result"></div>
+
+	<script type="text/javascript">
+		let calc = function() {
+			let result;
+			let x = parseInt(prompt("첫번째 숫자를 입력하세요"));
+			let y = prompt("연산자를 입력하세요\n(+,-,*,/,% 중 하나)")
+			let z = parseInt(prompt("두번째 숫자를 입력하세요"));
+			if (y == "+") {
+				result = x + z;
+			} else if (y == "-") {
+				result = x - z;
+			} else if (y == "*") {
+				result = x * z;
+			} else if (y == "/") {
+				result = x / z;
+			} else if (y == "%") {
+				result = x % z;
+			} else {
+				alert("연산자만을 기입하여야합니다.");
+				return calc();
+			}
+			// 			document.write(x + y + z + " = " + result);//테스트용으로만 사용해야함
+			document.getElementById('result').textContent = x + y + z + " = "
+					+ result;
+		}
+	</script>
+	<input type="button" value="계산" onclick="calc()">
+</body>
+</html>
