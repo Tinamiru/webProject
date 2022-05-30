@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../../css/outStyle.css">
+
+<style>
+div {
+	border: solid;
+	border-color: black;
+	height: 80px;
+	width: 400px;
+	text-align: center;
+	margin-top: 2%;
+}
+</style>
+<script type="text/javascript">
+	function rsp() {
+		let p1 = prompt("첫번째 사람의 Pick");
+		let p2 = prompt("두번째 사람의 Pick");
+		let rsp;
+		let result;
+
+		if (p1 == p2) {
+			rsp = "비겼습니다.";
+		} else if (p1 == "가위" && p2 == "바위" || p1 === "바위" && p2 == "보"
+				|| p1 === "보" && p2 == "가위") {
+			rsp = "두번째 사람 승!";
+		} else {
+			rsp = "첫번째 사람 승!";
+		}
+
+		//백틱 (backtick/grave accent) - ES6
+		// 문자열과 변수의 값을 하나의 문자열 안에 기술할 수 있다
+		// 백틱 문자열 안에 변수는 ${} 기호 안쪽에 기술한다
+
+		result = `첫번째 사람: ${p1} <br>`;
+		result += `두번째 사람: ${p2} <br>`;
+		result += `결과: ${rsp}`;
+
+		document.getElementsByTagName('div')[0].innerHTML = result;
+	}
+</script>
+</head>
+<body>
+	<input type="button" value="가위바위보 게임" onclick="rsp()">
+	<div></div>
+
+</body>
+</html>

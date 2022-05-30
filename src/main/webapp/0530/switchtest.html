@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+div {
+	border: solid;
+	border-color: black;
+	height: 50px;
+	width: 200px;
+	text-align: center;
+	margin-top: 2%;
+}
+</style>
+
+</head>
+<body>
+
+	<input type="button" value="성적입력기" onclick="grade()">
+	<div></div>
+
+	<script>
+		function grade() {
+			let grade = prompt("성적을 입력하십시오", "100이하의 정수만 입력하십시오");
+			if (grade > 100) {
+				document.write("100 이하의 정수만 입력하십시오");
+			} else if (isNaN(grade)) {
+				document.write("숫자를 입력하십시오");
+			} else
+// 				switch (grade / 10) {
+// 				case 10:
+// 				case 9:
+// 					document.getElementsByTagName('div')[0].innerText = "A학점입니다.";
+// 					break;
+// 				case 8:
+// 					document.getElementsByTagName('div')[0].innerText = "B학점입니다.";
+// 					break;
+// 				case 7:
+// 					document.getElementsByTagName('div')[0].innerText = "C학점입니다.";
+// 					break;
+// 				case 6:
+// 					document.getElementsByTagName('div')[0].innerText = "D학점입니다.";
+// 					break;
+// 				case 5:
+// 					document.getElementsByTagName('div')[0].innerText = "F학점입니다.";
+// 					break;
+// 				}
+			// if문 활용
+			grade = grade / 10;
+			if (grade == 10 || grade == 9) {
+				document.getElementsByTagName('div')[0].innerText = "A학점입니다.";
+			} else if (grade == 8) {
+				document.getElementsByTagName('div')[0].innerText = "A학점입니다.";
+			} else if (grade == 7) {
+				document.getElementsByTagName('div')[0].innerText = "A학점입니다.";
+			} else if (grade == 6) {
+				document.getElementsByTagName('div')[0].innerText = "A학점입니다.";
+			} else {
+				document.getElementsByTagName('div')[0].innerText = "A학점입니다.";
+			}
+		}
+	</script>
+</body>
+</html>
