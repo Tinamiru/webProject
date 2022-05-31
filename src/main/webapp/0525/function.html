@@ -13,31 +13,90 @@ label {
 
 </head>
 <body>
+	<script type="text/javascript">
+		let argsX;
+		let argsY;
 
-	<form action="">
-		<label id="x">첫번째 값</label> <input id="x"><br> <label
-			id="y">두번째 값</label> <input id="y"><br> <label id="z">세번째
-			값</label> <input id="z"> <input type="button" value="+"
-			onclick="calc()"> <input type="button" value="-"
-			onclick="calc()"> <input type="button" value="*"
-			onclick="calc()"> <input type="button" value="/"
-			onclick="calc()"> <input type="button" value="%"
-			onclick="calc()">
+		function calc(t) {
+			argsX = parseInt(document.getElementById('x').value);
+			argsY = parseInt(document.getElementById('y').value);
 
-	<p>
-	<label for="sp1"> 첫번째 값</label>
-	<span id="sp1"></span>
-	</p>
-	<p>
-	<label for="sp2"> 두번째 값</label>
-	<span id="sp2"></span>
-	</p>
-	<p>
-	<label for="sp3"> 세번째 값</label>
-	<span id="sp3"></span>
-	</p>
+			let result;
+
+			switch (t) {
+			case '+':
+				result = add();
+				break;
+			case '-':
+				result = subtract();
+				break;
+			case '*':
+				result = multiply();
+				break;
+			case '/':
+				result = divide();
+				break;
+			case '%':
+				result = avg();
+				break;
+			}
+
+			document.getElementById('result').value = result;
+			document.getElementById('sp1').innerText = argsX;
+			document.getElementById('sp2').innerText = argsY;
+			document.getElementById('sp3').innerText = result;
+		}
+
+		function add() {
+			return argsX + argsY;
+		}
+		function subtract() {
+			return argsX - argsY;
+		}
+		function multiply() {
+			return argsX * argsY;
+		}
+		function divide() {
+			return argsX / argsY;
+		}
+		function avg() {
+			return argX % argsY;
+		}
+	</script>
+
+	<form>
+		<label for="x">첫번째 값</label>
+		<input id="x">
+		<br>
+
+		<label for="y">두번째 값</label>
+		<input id="y">
+		<br>
+
+		<label for="result">결과 값</label>
+		<input id="result">
+		<br>
+
+		<input type="button" value="+" onclick="calc('+')">
+		<input type="button" value="-" onclick="calc('-')">
+		<input type="button" value="*" onclick="calc('*')">
+		<input type="button" value="/" onclick="calc('/')">
+		<input type="button" value="%" onclick="calc('%')">
+
+		<p>
+			<label for="sp1">첫번째 값</label>
+			<span id="sp1"></span>
+		</p>
+		<p>
+			<label for="sp2">두번째 값</label>
+			<span id="sp2"></span>
+		</p>
+		<p>
+			<label for="sp3">결과 값</label>
+			<span id="sp3"></span>
+		</p>
 
 	</form>
-	
+
 </body>
 </html>
