@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/outStyle.css">
+</head>
+<body>
+	<pre>
+		사람 이름을 계속 입력 받아 배열에 저장하고 그 저장된 이름을
+		출력하는 프로그램을 작성하시오.
+		- 입력은 prompt 이용
+		- 입력의 마지막은 공백 문자를 입력하거나, 취소 버튼을 눌렀을 때
+		(취소 버튼은 null이 입력될 때)
+	</pre>
+	<input type="button" value="사람이름추가" onclick="push()">
+	<div style="border: solid;" id="man">출력창입니다.</div>
+	<br>
+
+	<input type="button" value="정수입력" onclick="num()">
+	<div style="border: solid;" id="num">출력창입니다.</div>
+</body>
+<script type="text/javascript">
+	let arr = [];
+	function push() {
+		while (true) {
+			let a = prompt("이름 입력");
+			// 	arr.push(a);
+			if (a == null || a == " ") {
+				break;
+
+			} else if (a != null) {
+				arr.unshift(a);
+				// 	let result = `push() : ${arr}`;
+				let result = `배열의 값 : ${arr}`;
+				document.querySelector('#man').innerText = result;
+			}
+
+		}
+	}
+
+	function num() {
+		let arr = new Array();
+		while (true) {
+			let num = prompt("중복 되지 않는 정수 입력")
+			let idx = arr.indexOf(num);
+
+			if (idx != -1) {
+				alert("중복된 수 입니다.")
+			} else {
+				arr.push(num);
+			}
+			if (arr.length >= 5) {
+				break;
+			}
+		}
+		let result = `정수 : ${arr}`;
+		document.querySelector('#num').innerText = result;
+	}
+</script>
+</html>
