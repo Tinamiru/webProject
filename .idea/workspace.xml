@@ -16,6 +16,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="29k1B5dZIjZS2nVpmD90kQmnOov" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -41,6 +44,8 @@
       <workItem from="1654158660953" duration="87000" />
       <workItem from="1654248145386" duration="433000" />
       <workItem from="1654559365973" duration="1000" />
+      <workItem from="1654593914477" duration="124000" />
+      <workItem from="1654594053682" duration="21000" />
     </task>
     <task id="LOCAL-00001" summary="DDIT Web Study Project.">
       <created>1653911238877</created>
@@ -70,7 +75,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654248173979</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="DDIT Web Study Project.">
+      <created>1654594028525</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1654594028525</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
