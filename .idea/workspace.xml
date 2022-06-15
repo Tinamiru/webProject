@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="900f3158-84dc-45e6-b16c-ffacada0b764" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/0614/attributeSelector.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/0614/attributeSelector.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/webProject.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +30,10 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/forClass/lib" />
+    <property name="project.structure.last.edited" value="모듈" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -51,6 +57,7 @@
       <workItem from="1655095234650" duration="28000" />
       <workItem from="1655182020798" duration="19000" />
       <workItem from="1655202811041" duration="1000" />
+      <workItem from="1655268234995" duration="258000" />
     </task>
     <task id="LOCAL-00001" summary="DDIT Web Study Project.">
       <created>1653911238877</created>
@@ -115,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655182033439</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="DDIT Web Study Project.">
+      <created>1655268258295</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1655268258295</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
