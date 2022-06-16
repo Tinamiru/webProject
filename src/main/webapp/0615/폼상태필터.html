@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/outStyle.css">
+<script src="../js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <form>
+    <input disabled> <br>
+    <input type="password" disabled> <br>
+    <select disabled>
+      <option>option1</option>
+      <option>option2</option>
+      <option>option3</option>
+      <option>option4</option>
+    </select> <br>
+    <textarea disabled>text</textarea> <br>
+    <input type="button" value="확인" 
+    		onclick="alert('안녕')" disabled>
+  </form>
+<script>
+//속성 변경 - 자바스크립트 방식 - 하나씩 적용
+// document.getElementsByTagName('select')[0]
+document.querySelector('select')
+	.removeAttribute('disabled');
+	
+// console.log(document.querySelectorAll('form *').length);
+
+//속성 변경 - 제이쿼리 방식 - 일괄 적용
+// $("*").attr('disabled',false);
+
+$('form *:enabled').css('border','solid blue');
+$('form *:disabled').css('border','solid red');
+
+</script>
+</body>
+</html>
+
+
+
+

@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="900f3158-84dc-45e6-b16c-ffacada0b764" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/0614/attributeSelector.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/0614/attributeSelector.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/webProject.iml" afterDir="false" />
-    </list>
+    <list default="true" id="900f3158-84dc-45e6-b16c-ffacada0b764" name="변경" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,7 +53,7 @@
       <workItem from="1655095234650" duration="28000" />
       <workItem from="1655182020798" duration="19000" />
       <workItem from="1655202811041" duration="1000" />
-      <workItem from="1655268234995" duration="258000" />
+      <workItem from="1655268234995" duration="282000" />
     </task>
     <task id="LOCAL-00001" summary="DDIT Web Study Project.">
       <created>1653911238877</created>
@@ -129,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655268258295</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="DDIT Web Study Project.">
+      <created>1655268506595</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1655268506595</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
