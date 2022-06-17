@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/outStyle.css">
+<style>
+img {
+  width: 50px;
+  height: 50px;
+}
+[type="button"] {
+  display: none;
+}
+</style>
+<script src="../js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <img src="../images/coffee.jpg" alt="" src2="../images/ddit.PNG">
+  <img src="../images/iu.jpg" alt="" src2="../images/suzy.jfif">
+  <img src="../images/img/bogum.jfif" alt="" src2="../images/coffee.jpg">
+  <img src="../images/suzy.jfif" alt="" src2="../images/iu.jpg">
+  <br><br>
+  <input type="button" value="보이기">
+<script>
+let v_src = '';
+$('img').on('mouseover',function(){
+	v_src = $(this).attr('src');
+	let v_src2 = $(this).attr('src2');
+	$(this).attr('src',v_src2);
+});
+
+$('img').on('mouseout',function(){
+	$(this).attr('src',v_src);
+});
+
+$('img').on('dblclick',function(){
+	$(this).hide();
+	//모든 대상 사라졌을 때 버튼 보이기
+	if( $('img:visible').length < 1 ) $('input:button').show();
+});
+
+$('input:button').on('click',function(){
+	$('img').show();
+	$(this).hide();
+});
+
+
+
+
+
+</script>
+</body>
+</html>

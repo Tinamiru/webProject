@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/outStyle.css">
+<style>
+img {
+  width: 120px;
+  height: 120px;
+  margin: 20px;
+}
+div {
+  padding: 10px; 
+  margin: 10px; 
+}
+.border {
+  border: 5px inset red;
+  border-radius: 40px;
+}
+.pColor {
+  color: green;
+}
+.pBack {
+  background-color: gold;
+}
+.pBack1 {
+  background-color: purple;
+}
+</style>
+<script src="../js/jquery-3.6.0.min.js"></script>
+<script>
+$(function(){
+	$('input:button').on('click',function(){
+// 		$('p').css('color','blue');
+		$('p').addClass('pColor');
+	});
+	
+	$('p').on('click',function(){
+// 		$(this).addClass('pBack');
+		
+		//hasClass를 이용한 add-remove 
+// 		if($(this).hasClass('pBack')){
+// 			//removeClass
+// 			$(this).removeClass('pBack');
+// 		}else{
+// 			//addClass
+// 			$(this).addClass('pBack');
+// 		}
+		
+		$(this).toggleClass('pBack1');
+	});
+	
+	//비어있는 div에 mouseover, mouseout 이벤트로 bBack적용하기
+	$('div:empty').on('mouseover',function(){
+		$(this).addClass('pBack');
+	});
+	$('div:empty').on('mouseout',function(){
+		$(this).removeClass('pBack');
+	});
+	
+	//이미지에 mouseover, mouseout 으로 border add-remove하기
+// 	$('img').on('mouseover',function(){
+// 		$(this).addClass('border');
+// 	});
+// 	$('img').on('mouseout',function(){
+// 		$(this).removeClass('border');
+// 	});
+	
+	//hover() 로 mouseover, mouseout을 간단히 작성
+// 	$('img').hover(function(){
+// 		$(this).addClass('border');
+// 	},function(){
+// 		$(this).removeClass('border');
+// 	});
+	
+	$('img').on('click',function(){
+		$(this).toggleClass('border');
+	});
+	
+	
+	
+});
+</script>
+</head>
+<body>
+  <div>
+    <input type="button" value="확인">
+    <p>Click!!</p>
+    <p>Click!!</p>
+    <p>Click!!</p>
+    <p>Click!!</p>
+    <p>Click!!</p>
+    
+    <div></div>
+    
+    <img src="../images/suzy.jfif" alt="">
+    <img src="../images/iu.jpg" alt="">
+    <img src="../images/iu.jpg" alt="">
+    <img src="../images/suzy.jfif" alt="">
+  </div>
+</body>
+</html>
