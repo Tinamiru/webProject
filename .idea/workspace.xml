@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="900f3158-84dc-45e6-b16c-ffacada0b764" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/0616/append.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/0616/append.html" afterDir="false" />
-    </list>
+    <list default="true" id="900f3158-84dc-45e6-b16c-ffacada0b764" name="변경" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,6 +56,7 @@
       <workItem from="1655268234995" duration="282000" />
       <workItem from="1655379400227" duration="43000" />
       <workItem from="1655457134665" duration="57000" />
+      <workItem from="1655700787147" duration="45000" />
     </task>
     <task id="LOCAL-00001" summary="DDIT Web Study Project.">
       <created>1653911238877</created>
@@ -150,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655457173068</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="DDIT Web Study Project.">
+      <created>1655700804433</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1655700804433</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
