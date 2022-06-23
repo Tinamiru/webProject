@@ -25,7 +25,19 @@
   
 <script>
 $('a').on('click',function(){
-	event.preventDefault();
+	let nm = prompt("나이를 입력해요");
+	
+	//숫자가 아닌 정보를 입력받았을때 isNaN() : not a number
+	if(isNaN(nm)){	//문자를 입력받았을 때 true
+	  alert("숫자만 입력가능해요");
+// 	  return;		//null을 반환
+	  return false;	//명확한 데이터를 전달해서 결과를 표현하지 못하게 만듦 
+	}
+	
+	if(nm <= 15){
+	  event.preventDefault();
+	  alert("이동 불가입니다");
+	}
 });
 
 $('textarea').on('keydown',function(){

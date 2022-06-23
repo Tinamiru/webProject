@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/outStyle.css">
+<style>
+#d1 {
+  border: solid orange;
+  margin: 10px;
+}
+#d2 {
+  border: solid green;
+  margin: 10px;
+}
+</style>
+<script src="../js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <button>버튼</button>
+  <div id="d1"></div>
+  <div id="d2"></div>
+<script>
+let a = "apple";
+let b = "pie";
+
+$('button').on('click',function(){
+	//$(selector).load(url, data, callback_fn)
+	$('#d1').load('../0617/imgRotate.jsp', 
+			{"str1" : a, "str2" : b},
+			//response, status, xhr
+			function(resp,stts,xhr){
+				$('#d2').html(resp);
+			});
+});
+
+
+</script>
+</body>
+</html>
