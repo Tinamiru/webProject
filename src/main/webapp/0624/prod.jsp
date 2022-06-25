@@ -9,7 +9,7 @@
 
 	Class.forName("oracle.jdbc.driver.OracleDriver");
 	String url = "jdbc:oracle:thin:@localhost:1521:xe";
-	Connection conn = DriverManager.getConnection(url, "sem", "java");
+	Connection conn = DriverManager.getConnection(url, "sjr", "java");
 	Statement stmt = conn.createStatement();
 	String sql = "select prod_id, prod_name from prod" +
 					" where prod_lgu = '" + lprodGu + "'";

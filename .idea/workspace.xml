@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="900f3158-84dc-45e6-b16c-ffacada0b764" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/or/ddit/JDBCUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/or/ddit/JDBCUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/0623/ajax_fetch.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/0623/ajax_fetch.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +80,8 @@
       <workItem from="1655959469523" duration="28000" />
       <workItem from="1655984948918" duration="120000" />
       <workItem from="1656044299977" duration="6000" />
+      <workItem from="1656062920611" duration="28000" />
+      <workItem from="1656070577058" duration="1000" />
     </task>
     <task id="LOCAL-00001" summary="DDIT Web Study Project.">
       <created>1653911238877</created>
@@ -198,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655984998035</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="DDIT Web Study Project.">
+      <created>1656062939937</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1656062939938</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

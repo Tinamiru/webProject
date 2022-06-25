@@ -19,8 +19,8 @@ ResultSet rs = stmt.executeQuery("select * from lprod");
 <table border=1>
   <tr style="background-color: blue;">
     <td>아이디</td>
-    <td>GU</td>
-    <td>NM</td>
+    <td>ㅈㅣ유</td>
+    <td>앤엠</td>
   </tr>
 <%
 //결과값 을 받아서 json object array로 만들어서
