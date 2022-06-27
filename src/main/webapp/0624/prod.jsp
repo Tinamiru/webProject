@@ -18,11 +18,24 @@
 	if(rs.next()){	//데이터가 있음
 %>
 		{
-			"code" : "ok"
-<%-- 				//while(rs.next()) --%>
-<%-- 				//index로 쉼표 추가 --%>
-<%-- 				"data" : [{},{},{},{},{},{}] --%>
-		}
+			"code"  : "ok",
+			"value" : [
+<%
+			int i = 0;
+			while(rs.next()){
+			//index로 쉼표 추가
+				if(i>0) out.print(",");
+%>				
+				{
+				  "prodId" : "<%=rs.getString("prod_id") %>",
+				  "prodNm" : "<%=rs.getString("prod_name") %>"
+				}
+<% 			
+				i++;
+			}//while end
+%>
+			]
+		} <%-- json data end --%>
 <%
 	}else{ 			//데이터가 없음
 %>		{

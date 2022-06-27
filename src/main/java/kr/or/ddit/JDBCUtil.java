@@ -29,7 +29,7 @@ public class JDBCUtil {
 		String url = "jdbc:oracle:thin:@localhost:1521:xe";
 		//연결 객체 생성에 필요한 정보 셋팅
 		try {
-			conn = DriverManager.getConnection(url, "sem", "java");
+			conn = DriverManager.getConnection(url, "sjr", "java");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
