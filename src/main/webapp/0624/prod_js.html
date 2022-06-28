@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/outStyle.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"
+>
+<script src="../js/jquery-3.6.0.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"
+></script>
+</head>
+<body>
+	<div class="col-md-3">
+		<select class="form-control" id="lprod">
+			<!--       <option>lprod리스트</option> -->
+		</select>
+	</div>
+	<div class="col-md-3">
+		<select class="form-control" id="prod">
+			<!--       <option>prod리스트</option> -->
+		</select>
+	</div>
+	<br>
+	<br>
+	<div id="result">prod의 상세정보</div>
+
+	<script>
+		//자바스크립트로 ajax - lprod
+		//숙제
+		let req = new XMLHttpRequest();
+		//자바스크립트 형식으로 ajax  - type HTML
+		req.open('get', 'lprod.jsp');
+		req.send();
+		//select id영역에 뿌려주기..
+		req.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				let data = JSON.parse(this.responseText);
+				let rst = "";
+				for (let i = 0; i < data.length; i++) {
+					rst += `<option value='${data[i].gu}'>${data[i].nm}</option>`;
+				}
+				document.querySelector('#lprod').innerHTML = rst;
+
+				//trigger 
+				//	- old
+				//			 	 let customEvent = document.createEvent('Event');
+				//			 	 //initEvent(event, bubbles, cancelable)
+				//			 	 customEvent.initEvent('change','true','true');
+				//			 	 document.querySelector('#lprod').dispatchEvent(customEvent);
+				// - new
+				let event = new MouseEvent('change', {
+					bubbles : true,
+					cancelable : true,
+				});
+				document.querySelector('#lprod').dispatchEvent(event);
+			}
+		}
+
+		document.querySelector('#lprod').onchange = function(e) {
+			// alert("반응")
+			let req = new XMLHttpRequest();
+			//자바스크립트 형식으로 ajax  - type HTML
+			req.open('get', "prod.jsp?gu=" + this.value);
+			req.send();
+			//select id영역에 뿌려주기..
+			req.onreadystatechange = function(e) {
+				if (req.readyState == XMLHttpRequest.DONE && req.status == 200) {
+					let data = JSON.parse(this.responseText).value;
+					let rst = ``;
+					for (let i = 0; i < data.length; i++) {
+						rst += `<option value='${data[i].prodId}'>${data[i].prodNm}</option>`;
+					}
+					document.querySelector('#prod').innerHTML = rst;
+				}
+			}
+		}
+		document.querySelector('#prod').onchange = function() {
+			let xhr = new XMLHttpRequest();
+			let data = 'prodId=' + this.value;
+			console.log(this.value);
+			xhr.open('post', 'detail.jsp');
+			xhr.setRequestHeader('content-type',
+					'application/x-www-form-urlencoded');
+			xhr.send(data); //data전달
+			xhr.onreadystatechange = function() {
+				if (xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
+					let data = JSON.parse(xhr.responseText);
+
+					let rst = `<table border='1' class='table table-condensed'>`;
+					//출력
+/* 					rst += "<tr><td>제품id</td><td>" + data.id + "</td></tr>";
+					rst += "<tr><td>제품명</td><td>" + data.nm + "</td></tr>";
+					rst += "<tr><td>제품코드</td><td>" + data.lgu + "</td></tr>";
+					rst += "<tr><td>제품원가</td><td>" + data.cost + "</td></tr>";
+					rst += "<tr><td>제품판매가</td><td>" + data.price + "</td></tr>";
+					rst += "<tr><td>제품세일가</td><td>" + data.sale + "</td></tr>";
+					rst += `</table>`; */
+					
+					
+					 //출력 - 반복문
+					for(i=1; i<Object.keys(data).length; i++){
+						rst += `<tr><td>${Object.keys(data)[i]}</td>`;
+						rst += `<td>${Object.values(data)[i]}</td></tr>`;
+					  }
+					rst += `</table>`;
+
+					
+					document.querySelector('#result').innerHTML = rst;
+
+				}
+			}
+		}
+	</script>
+</body>
+</html>

@@ -8,7 +8,7 @@
   String v_dong = request.getParameter("dong");
   Class.forName("oracle.jdbc.driver.OracleDriver"); 
   String url = "jdbc:oracle:thin:@localhost:1521:xe";
-  Connection conn = DriverManager.getConnection(url,"sem","java");
+  Connection conn = DriverManager.getConnection(url,"sjr","java");
   Statement stmt = conn.createStatement();
   String sql = "select * from ziptb where dong like '" + v_dong + "%'";
   ResultSet rs = stmt.executeQuery(sql); 
