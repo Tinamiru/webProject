@@ -217,10 +217,10 @@ function valid(){
   form의 value를 한번에 전송 가능한 데이터로 만들어주는데,
   이를 위해서는 form의 name속성 값을 VO필드명으로 작성해야 함
   */	
-  let serialize = $('form').serialize();	//url-encoded형식
+//   let serialize = $('form').serialize();	//url-encoded형식 key=value
   //mem_id=a123&mem_name=%ED%95%9C%EA%B8%80%EB%A7%8C&mem_bir=2022...
 
-//   let serializeArray = $('form').serializeArray();	//object형식
+  let serializeArray = $('form').serializeArray();	//object형식
   // [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
   
   //console.log(serializeArray);
@@ -228,12 +228,24 @@ function valid(){
   $.ajax({
 	url : 'join.jsp',
 	type : 'post',
-	data : serialize,
-	success:function(){},
+	//content-type default application/x-www-form-urlencoded
+	contentType : 'application/json; charset=utf-8',
+	data : JSON.stringify(serializeArray),	//js object => json object로 변환
+	success:function(num){
+	  if(num == 1){
+		$('#joinspan').html("회원가입 성공").css({
+			'color':'green', 'font-weight':'bold'
+		});
+	  }else{
+		$('#joinspan').html("회원가입 실패").css({
+			'color':'red', 'font-weight':'bold'
+		});
+	  }
+	},
 	error:function(xhr){
 		alert(xhr.status);
 	},
-	dataType: ''
+	dataType: 'html'
   });
 	
 	
